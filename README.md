@@ -1,2 +1,2 @@
 # KompisUSB
-KompisUSB - Elkjøp Drammen
+Under utvikling!

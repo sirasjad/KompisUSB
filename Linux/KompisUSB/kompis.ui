@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>602</width>
-    <height>683</height>
+    <width>772</width>
+    <height>662</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>260</y>
+      <x>600</x>
+      <y>20</y>
       <width>151</width>
       <height>211</height>
      </rect>
@@ -82,8 +82,8 @@
    <widget class="QPushButton" name="startKompis">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>480</y>
+      <x>600</x>
+      <y>240</y>
       <width>151</width>
       <height>31</height>
      </rect>
@@ -102,7 +102,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>140</y>
+      <y>150</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -167,7 +167,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>10</y>
+      <y>20</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -175,7 +175,7 @@
     <property name="title">
      <string>Rens:</string>
     </property>
-    <widget class="QCheckBox" name="checkBox_3">
+    <widget class="QCheckBox" name="checkbox_install_mb">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -231,10 +231,10 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>440</x>
-      <y>500</y>
-      <width>111</width>
-      <height>121</height>
+      <x>420</x>
+      <y>250</y>
+      <width>141</width>
+      <height>141</height>
      </rect>
     </property>
     <property name="text">
@@ -251,7 +251,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>410</y>
+      <y>430</y>
       <width>341</width>
       <height>81</height>
      </rect>
@@ -290,7 +290,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>100</y>
+      <y>110</y>
       <width>171</width>
       <height>141</height>
      </rect>
@@ -368,7 +368,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>500</y>
+      <y>520</y>
       <width>341</width>
       <height>101</height>
      </rect>
@@ -415,7 +415,7 @@
       <string>F-Secure</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_23">
+    <widget class="QCheckBox" name="checkbox_uninstall_ec">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -428,7 +428,7 @@
       <string>Elkjøp Cloud</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_24">
+    <widget class="QCheckBox" name="checkbox_uninstall_mb">
      <property name="geometry">
       <rect>
        <x>120</x>
@@ -459,7 +459,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
+      <y>20</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -493,7 +493,7 @@
       <string>Google Chrome</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox_30">
+    <widget class="QCheckBox" name="checkbox_install_ec">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -524,7 +524,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>270</y>
+      <y>280</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -589,7 +589,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>140</y>
+      <y>150</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -654,7 +654,7 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>270</y>
+      <y>280</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -719,7 +719,7 @@
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>10</y>
+      <y>20</y>
       <width>171</width>
       <height>81</height>
      </rect>
@@ -754,13 +754,26 @@
      </property>
     </widget>
    </widget>
+   <widget class="QPlainTextEdit" name="logBox">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>400</y>
+      <width>361</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>602</width>
+     <width>772</width>
      <height>22</height>
     </rect>
    </property>
@@ -781,7 +794,6 @@
    <addaction name="menuMeny"/>
    <addaction name="menuOm"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionInnstillinger">
    <property name="text">
     <string>Innstillinger</string>

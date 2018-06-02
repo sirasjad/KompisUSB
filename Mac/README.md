@@ -1,2 +1,0 @@
-# KompisUSB
-Under utvikling!

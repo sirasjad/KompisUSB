@@ -4,6 +4,8 @@
 Kompis::Kompis(QWidget *parent) : QMainWindow(parent), ui(new Ui::Kompis){
     ui->setupUi(this);
     log("Starter KompisUSB.");
+    QPixmap pix("/home/sirasjad/Jotta/GitHub/KompisUSB/resources/elkjop.png");
+    ui->label_logo->setPixmap(pix);
 }
 
 Kompis::~Kompis(){

@@ -48,7 +48,7 @@ public:
     QCheckBox *checkBox_4;
     QCheckBox *checkBox_8;
     QCheckBox *checkBox_16;
-    QLabel *label_2;
+    QLabel *label_logo;
     QGroupBox *groupBox_4;
     QCheckBox *checkBox_11;
     QCheckBox *checkBox_13;
@@ -160,11 +160,11 @@ public:
         checkBox_16 = new QCheckBox(groupBox_3);
         checkBox_16->setObjectName(QStringLiteral("checkBox_16"));
         checkBox_16->setGeometry(QRect(10, 50, 121, 23));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(420, 250, 141, 141));
-        label_2->setPixmap(QPixmap(QString::fromUtf8("elkjop.png")));
-        label_2->setScaledContents(true);
+        label_logo = new QLabel(centralWidget);
+        label_logo->setObjectName(QStringLiteral("label_logo"));
+        label_logo->setGeometry(QRect(420, 250, 141, 141));
+        label_logo->setPixmap(QPixmap(QString::fromUtf8("resources/elkjop.png")));
+        label_logo->setScaledContents(true);
         groupBox_4 = new QGroupBox(centralWidget);
         groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
         groupBox_4->setGeometry(QRect(20, 430, 341, 81));
@@ -331,7 +331,7 @@ public:
         checkBox_4->setText(QApplication::translate("Kompis", "CrapFjerner", nullptr));
         checkBox_8->setText(QApplication::translate("Kompis", "CCleaner", nullptr));
         checkBox_16->setText(QApplication::translate("Kompis", "OnyX", nullptr));
-        label_2->setText(QString());
+        label_logo->setText(QString());
         groupBox_4->setTitle(QApplication::translate("Kompis", "Oppdatering:", nullptr));
         checkBox_11->setText(QApplication::translate("Kompis", "Win10 Offline Installer", nullptr));
         checkBox_13->setText(QApplication::translate("Kompis", "Win8.1 Upgrade", nullptr));

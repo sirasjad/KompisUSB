@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Kompis</string>
+   <string>KompisUSB</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QGroupBox" name="groupBox">
@@ -812,7 +812,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>30</y>
+       <y>70</y>
        <width>121</width>
        <height>23</height>
       </rect>
@@ -825,7 +825,20 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>70</y>
+       <y>30</y>
+       <width>141</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sjekk nettleser</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="box_skype_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
        <width>121</width>
        <height>23</height>
       </rect>
@@ -868,35 +881,35 @@
     <property name="title">
      <string>Meny</string>
     </property>
-    <addaction name="actionInnstillinger"/>
-    <addaction name="actionAvslutt"/>
+    <addaction name="menu_innstillinger"/>
+    <addaction name="menu_avslutt"/>
    </widget>
    <widget class="QMenu" name="menuOm">
     <property name="title">
      <string>Om</string>
     </property>
-    <addaction name="actionSe_etter_oppdatering"/>
-    <addaction name="actionOm_Kompis"/>
+    <addaction name="menu_oppdatering"/>
+    <addaction name="menu_omkompis"/>
    </widget>
    <addaction name="menuMeny"/>
    <addaction name="menuOm"/>
   </widget>
-  <action name="actionInnstillinger">
+  <action name="menu_innstillinger">
    <property name="text">
     <string>Innstillinger</string>
    </property>
   </action>
-  <action name="actionAvslutt">
+  <action name="menu_avslutt">
    <property name="text">
     <string>Avslutt</string>
    </property>
   </action>
-  <action name="actionOm_Kompis">
+  <action name="menu_omkompis">
    <property name="text">
     <string>Om Kompis</string>
    </property>
   </action>
-  <action name="actionSe_etter_oppdatering">
+  <action name="menu_oppdatering">
    <property name="text">
     <string>Se etter oppdatering</string>
    </property>

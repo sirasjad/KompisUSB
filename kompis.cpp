@@ -1,5 +1,6 @@
 #include "kompis.h"
 #include "ui_kompis.h"
+#include "aboutwindow.h"
 
 Kompis::Kompis(QWidget *parent) : QMainWindow(parent), ui(new Ui::Kompis){
     ui->setupUi(this);
@@ -106,4 +107,10 @@ void Kompis::on_box_fjernremote_toggled(bool checked){
         ui->box_remotefix->setEnabled(false);
     }
     else ui->box_remotefix->setEnabled(true);
+}
+
+void Kompis::on_menu_omkompis_triggered(){
+    AboutWindow ab;
+    ab.setModal(true);
+    ab.exec();
 }

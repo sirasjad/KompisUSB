@@ -21,10 +21,9 @@ private slots:
     void on_box_fjerncloud_toggled(bool checked);
     void on_box_malw_toggled(bool checked);
     void on_box_fjernmalw_toggled(bool checked);
-
     void on_box_remotefix_toggled(bool checked);
-
     void on_box_fjernremote_toggled(bool checked);
+    void on_menu_omkompis_triggered();
 
 private:
     Ui::Kompis *ui;

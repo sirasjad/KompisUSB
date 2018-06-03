@@ -27,10 +27,10 @@ QT_BEGIN_NAMESPACE
 class Ui_Kompis
 {
 public:
-    QAction *actionInnstillinger;
-    QAction *actionAvslutt;
-    QAction *actionOm_Kompis;
-    QAction *actionSe_etter_oppdatering;
+    QAction *menu_innstillinger;
+    QAction *menu_avslutt;
+    QAction *menu_omkompis;
+    QAction *menu_oppdatering;
     QWidget *centralWidget;
     QGroupBox *groupBox;
     QPushButton *pushButton;
@@ -94,6 +94,7 @@ public:
     QCheckBox *box_skype_2;
     QCheckBox *box_steam_2;
     QCheckBox *box_skype_3;
+    QCheckBox *box_skype_4;
     QPushButton *startKompis;
     QMenuBar *menuBar;
     QMenu *menuMeny;
@@ -104,14 +105,14 @@ public:
         if (Kompis->objectName().isEmpty())
             Kompis->setObjectName(QStringLiteral("Kompis"));
         Kompis->resize(740, 758);
-        actionInnstillinger = new QAction(Kompis);
-        actionInnstillinger->setObjectName(QStringLiteral("actionInnstillinger"));
-        actionAvslutt = new QAction(Kompis);
-        actionAvslutt->setObjectName(QStringLiteral("actionAvslutt"));
-        actionOm_Kompis = new QAction(Kompis);
-        actionOm_Kompis->setObjectName(QStringLiteral("actionOm_Kompis"));
-        actionSe_etter_oppdatering = new QAction(Kompis);
-        actionSe_etter_oppdatering->setObjectName(QStringLiteral("actionSe_etter_oppdatering"));
+        menu_innstillinger = new QAction(Kompis);
+        menu_innstillinger->setObjectName(QStringLiteral("menu_innstillinger"));
+        menu_avslutt = new QAction(Kompis);
+        menu_avslutt->setObjectName(QStringLiteral("menu_avslutt"));
+        menu_omkompis = new QAction(Kompis);
+        menu_omkompis->setObjectName(QStringLiteral("menu_omkompis"));
+        menu_oppdatering = new QAction(Kompis);
+        menu_oppdatering->setObjectName(QStringLiteral("menu_oppdatering"));
         centralWidget = new QWidget(Kompis);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         groupBox = new QGroupBox(centralWidget);
@@ -302,10 +303,13 @@ public:
         box_skype_2->setGeometry(QRect(10, 50, 121, 23));
         box_steam_2 = new QCheckBox(groupBox_11);
         box_steam_2->setObjectName(QStringLiteral("box_steam_2"));
-        box_steam_2->setGeometry(QRect(10, 30, 121, 23));
+        box_steam_2->setGeometry(QRect(10, 70, 121, 23));
         box_skype_3 = new QCheckBox(groupBox_11);
         box_skype_3->setObjectName(QStringLiteral("box_skype_3"));
-        box_skype_3->setGeometry(QRect(10, 70, 121, 23));
+        box_skype_3->setGeometry(QRect(10, 30, 141, 23));
+        box_skype_4 = new QCheckBox(groupBox_11);
+        box_skype_4->setObjectName(QStringLiteral("box_skype_4"));
+        box_skype_4->setGeometry(QRect(10, 90, 121, 23));
         startKompis = new QPushButton(centralWidget);
         startKompis->setObjectName(QStringLiteral("startKompis"));
         startKompis->setGeometry(QRect(570, 440, 151, 51));
@@ -325,10 +329,10 @@ public:
 
         menuBar->addAction(menuMeny->menuAction());
         menuBar->addAction(menuOm->menuAction());
-        menuMeny->addAction(actionInnstillinger);
-        menuMeny->addAction(actionAvslutt);
-        menuOm->addAction(actionSe_etter_oppdatering);
-        menuOm->addAction(actionOm_Kompis);
+        menuMeny->addAction(menu_innstillinger);
+        menuMeny->addAction(menu_avslutt);
+        menuOm->addAction(menu_oppdatering);
+        menuOm->addAction(menu_omkompis);
 
         retranslateUi(Kompis);
 
@@ -337,11 +341,11 @@ public:
 
     void retranslateUi(QMainWindow *Kompis)
     {
-        Kompis->setWindowTitle(QApplication::translate("Kompis", "Kompis", nullptr));
-        actionInnstillinger->setText(QApplication::translate("Kompis", "Innstillinger", nullptr));
-        actionAvslutt->setText(QApplication::translate("Kompis", "Avslutt", nullptr));
-        actionOm_Kompis->setText(QApplication::translate("Kompis", "Om Kompis", nullptr));
-        actionSe_etter_oppdatering->setText(QApplication::translate("Kompis", "Se etter oppdatering", nullptr));
+        Kompis->setWindowTitle(QApplication::translate("Kompis", "KompisUSB", nullptr));
+        menu_innstillinger->setText(QApplication::translate("Kompis", "Innstillinger", nullptr));
+        menu_avslutt->setText(QApplication::translate("Kompis", "Avslutt", nullptr));
+        menu_omkompis->setText(QApplication::translate("Kompis", "Om Kompis", nullptr));
+        menu_oppdatering->setText(QApplication::translate("Kompis", "Se etter oppdatering", nullptr));
         groupBox->setTitle(QApplication::translate("Kompis", "Velg modus:", nullptr));
         pushButton->setText(QApplication::translate("Kompis", "SA OPPSETT", nullptr));
         pushButton_2->setText(QApplication::translate("Kompis", "RTG OPPSETT", nullptr));
@@ -402,7 +406,8 @@ public:
         groupBox_11->setTitle(QApplication::translate("Kompis", "Avslutning:", nullptr));
         box_skype_2->setText(QApplication::translate("Kompis", "Snarveier", nullptr));
         box_steam_2->setText(QApplication::translate("Kompis", "Kunde info", nullptr));
-        box_skype_3->setText(QApplication::translate("Kompis", "Restart", nullptr));
+        box_skype_3->setText(QApplication::translate("Kompis", "Sjekk nettleser", nullptr));
+        box_skype_4->setText(QApplication::translate("Kompis", "Restart", nullptr));
         startKompis->setText(QApplication::translate("Kompis", "START KOMPIS", nullptr));
         menuMeny->setTitle(QApplication::translate("Kompis", "Meny", nullptr));
         menuOm->setTitle(QApplication::translate("Kompis", "Om", nullptr));

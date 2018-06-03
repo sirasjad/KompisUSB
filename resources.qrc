@@ -2,5 +2,7 @@
     <qresource prefix="/files">
         <file>img/elkjop.png</file>
         <file>img/kh.png</file>
+        <file>config/settings.ini</file>
+        <file>config/scripts.ini</file>
     </qresource>
 </RCC>

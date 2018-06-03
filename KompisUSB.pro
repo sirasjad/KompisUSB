@@ -7,15 +7,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         kompis.cpp \
-        aboutwindow.cpp
+        aboutwindow.cpp \
+    settings.cpp
 
 HEADERS += \
         kompis.h \
-        aboutwindow.h
+        aboutwindow.h \
+    settings.h
 
 FORMS += \
         kompis.ui \
-        aboutwindow.ui
+        aboutwindow.ui \
+    settings.ui
 
 RESOURCES += \
         resources.qrc

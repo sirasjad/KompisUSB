@@ -1,6 +1,7 @@
 #include "kompis.h"
 #include "ui_kompis.h"
 #include "aboutwindow.h"
+#include "settings.h"
 
 Kompis::Kompis(QWidget *parent) : QMainWindow(parent), ui(new Ui::Kompis){
     ui->setupUi(this);
@@ -113,4 +114,10 @@ void Kompis::on_menu_omkompis_triggered(){
     AboutWindow ab;
     ab.setModal(true);
     ab.exec();
+}
+
+void Kompis::on_menu_innstillinger_triggered(){
+    Settings se;
+    se.setModal(true);
+    se.exec();
 }

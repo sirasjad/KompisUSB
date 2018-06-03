@@ -2,9 +2,9 @@
 #include <QApplication>
 
 int main(int argc, char *argv[]){
-    QApplication a(argc, argv);
-    Kompis w;
-    w.show();
+    QApplication prog(argc, argv);
+    Kompis k;
+    k.show();
 
-    return a.exec();
+    return prog.exec();
 }

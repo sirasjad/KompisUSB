@@ -3,17 +3,55 @@
 
 Kompis::Kompis(QWidget *parent) : QMainWindow(parent), ui(new Ui::Kompis){
     ui->setupUi(this);
-    log("Starter KompisUSB.");
-    QPixmap pix("/home/sirasjad/Jotta/GitHub/KompisUSB/resources/elkjop.png");
-    ui->label_logo->setPixmap(pix);
+    loadProgram();
 }
 
 Kompis::~Kompis(){
     delete ui;
 }
 
+void Kompis::loadProgram(){
+    // Sjekk OS versjon
+    #if defined(Q_OS_MACOS)
+        os = "mac";
+    #elif defined(Q_OS_WIN)
+        os = "windows";
+    #elif defined(Q_OS_LINUX)
+        os = "linux";
+    #elif defined(Q_OS_UNIX)
+        os = "unix";
+    #else
+        os = "unknown";
+    #endif
+
+    // Sett logo
+    QString dir = "../" + QDir::currentPath();
+    QString dir2 = dir + "/resources/elkjop.png";
+    log(dir2);
+    //QPixmap pix();
+    //ui->label_logo->setPixmap(pix);
+
+    // Checkbox oppsett
+    if(os == "mac"){
+        ui->box_win10update->setEnabled(false);
+        ui->box_win8update->setEnabled(false);
+        ui->box_winlive->setEnabled(false);
+        ui->box_classicstart->setEnabled(false);
+        ui->box_crapfjerner->setEnabled(false);
+        log("Kjører KompisUSB for Mac.");
+    }
+    else if(os == "windows"){
+        ui->box_onyx->setEnabled(false);
+        log("Kjører KompisUSB for Windows.");
+    }
+    else{
+        ui->startKompis->setEnabled(false);
+        log("Ukjent operativsystem. Kontakt utvikler!");
+    }
+}
+
 void Kompis::on_startKompis_clicked(){
-    ui->checkbox_install_ec->setStyleSheet("QCheckBox { color: green; }");
+    ui->box_elkjopcloud->setStyleSheet("QCheckBox { color: green; }");
     log("Kjører Kompis.");
 }
 
@@ -27,22 +65,7 @@ QString Kompis::getTime(){
     return dateTimeString;
 }
 
-void Kompis::on_checkbox_install_ec_toggled(bool checked){
-    if(checked) ui->checkbox_uninstall_ec->setEnabled(false);
-    else ui->checkbox_uninstall_ec->setEnabled(true);
-}
-
-void Kompis::on_checkbox_uninstall_ec_toggled(bool checked){
-    if(checked) ui->checkbox_install_ec->setEnabled(false);
-    else ui->checkbox_install_ec->setEnabled(true);
-}
-
-void Kompis::on_checkbox_install_mb_toggled(bool checked){
-    if(checked) ui->checkbox_uninstall_mb->setEnabled(false);
-    else ui->checkbox_uninstall_mb->setEnabled(true);
-}
-
-void Kompis::on_checkbox_uninstall_mb_toggled(bool checked){
-    if(checked) ui->checkbox_install_mb->setEnabled(false);
-    else ui->checkbox_install_mb->setEnabled(true);
-}
+//void Kompis::on_checkbox_install_ec_toggled(bool checked){
+//    if(checked) ui->checkbox_uninstall_ec->setEnabled(false);
+//    else ui->checkbox_uninstall_ec->setEnabled(true);
+//}

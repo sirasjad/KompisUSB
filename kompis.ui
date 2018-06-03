@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>772</width>
-    <height>662</height>
+    <width>740</width>
+    <height>758</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>600</x>
-      <y>20</y>
-      <width>151</width>
-      <height>211</height>
+      <x>20</x>
+      <y>420</y>
+      <width>541</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="title">
@@ -30,7 +30,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>40</y>
+       <y>30</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -42,8 +42,8 @@
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>80</y>
+       <x>150</x>
+       <y>30</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -55,8 +55,8 @@
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>120</y>
+       <x>280</x>
+       <y>30</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -68,8 +68,8 @@
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>160</y>
+       <x>410</x>
+       <y>30</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -78,25 +78,6 @@
       <string>NULLSTILL</string>
      </property>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="startKompis">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>240</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>START KOMPIS</string>
-    </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
@@ -166,7 +147,7 @@
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>200</x>
       <y>20</y>
       <width>161</width>
       <height>121</height>
@@ -231,17 +212,17 @@
    <widget class="QLabel" name="label_logo">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>250</y>
-      <width>141</width>
-      <height>141</height>
+      <x>590</x>
+      <y>180</y>
+      <width>111</width>
+      <height>111</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>resources/elkjop.png</pixmap>
+     <pixmap resource="resources.qrc">:/files/img/elkjop.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -250,10 +231,10 @@
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>430</y>
-      <width>341</width>
-      <height>81</height>
+      <x>380</x>
+      <y>190</y>
+      <width>161</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="title">
@@ -264,12 +245,12 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>181</width>
+       <width>121</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Win10 Offline Installer</string>
+      <string>Win10 Update</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="box_win8update">
@@ -277,22 +258,35 @@
       <rect>
        <x>10</x>
        <y>50</y>
-       <width>131</width>
+       <width>151</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Win8.1 Upgrade</string>
+      <string>Win8.1 Update</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="box_win8update_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>WSUS Offline</string>
      </property>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_5">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>110</y>
-      <width>171</width>
-      <height>141</height>
+      <x>380</x>
+      <y>20</y>
+      <width>161</width>
+      <height>161</height>
      </rect>
     </property>
     <property name="title">
@@ -363,13 +357,26 @@
       <string>DDU</string>
      </property>
     </widget>
+    <widget class="QCheckBox" name="box_produkey_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reveal</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_6">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>520</y>
-      <width>341</width>
+      <x>380</x>
+      <y>300</y>
+      <width>331</width>
       <height>101</height>
      </rect>
     </property>
@@ -381,12 +388,12 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>81</width>
+       <width>141</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>McAfee</string>
+      <string>McAfee Livesafe</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="box_norton">
@@ -394,12 +401,12 @@
       <rect>
        <x>10</x>
        <y>50</y>
-       <width>81</width>
+       <width>131</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Norton</string>
+      <string>Norton Security</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="box_fsecure">
@@ -418,7 +425,7 @@
     <widget class="QCheckBox" name="box_fjerncloud">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>180</x>
        <y>30</y>
        <width>111</width>
        <height>23</height>
@@ -431,7 +438,7 @@
     <widget class="QCheckBox" name="box_fjernmalw">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>180</x>
        <y>50</y>
        <width>131</width>
        <height>23</height>
@@ -444,7 +451,7 @@
     <widget class="QCheckBox" name="box_fjernremote">
      <property name="geometry">
       <rect>
-       <x>120</x>
+       <x>180</x>
        <y>70</y>
        <width>101</width>
        <height>23</height>
@@ -588,10 +595,10 @@
    <widget class="QGroupBox" name="groupBox_10">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>150</y>
+      <x>560</x>
+      <y>20</y>
       <width>161</width>
-      <height>121</height>
+      <height>161</height>
      </rect>
     </property>
     <property name="title">
@@ -601,7 +608,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
+       <y>90</y>
        <width>121</width>
        <height>23</height>
       </rect>
@@ -614,7 +621,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>30</y>
+       <y>70</y>
        <width>131</width>
        <height>23</height>
       </rect>
@@ -623,24 +630,37 @@
       <string>Microsoft Office</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_foxit">
+    <widget class="QCheckBox" name="box_winlive">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>70</y>
+       <y>30</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Windows Live Mail</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="box_thunderbird">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
        <width>121</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Foxit Reader</string>
+      <string>Thunderbird</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="box_adobereader">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
+       <y>130</y>
        <width>121</width>
        <height>23</height>
       </rect>
@@ -649,12 +669,25 @@
       <string>Adobe Reader</string>
      </property>
     </widget>
+    <widget class="QCheckBox" name="box_foxit">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Foxit Reader</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_8">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>280</y>
+      <x>200</x>
+      <y>150</y>
       <width>161</width>
       <height>121</height>
      </rect>
@@ -715,19 +748,54 @@
      </property>
     </widget>
    </widget>
+   <widget class="QPlainTextEdit" name="logBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>701</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>280</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/files/img/kh.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <widget class="QGroupBox" name="groupBox_11">
     <property name="geometry">
      <rect>
-      <x>400</x>
-      <y>20</y>
-      <width>171</width>
-      <height>81</height>
+      <x>200</x>
+      <y>280</y>
+      <width>161</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="title">
-     <string>Epost:</string>
+     <string>Avslutning:</string>
     </property>
-    <widget class="QCheckBox" name="box_thunderbird">
+    <widget class="QCheckBox" name="box_skype_2">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -737,34 +805,53 @@
       </rect>
      </property>
      <property name="text">
-      <string>Thunderbird</string>
+      <string>Snarveier</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_winlive">
+    <widget class="QCheckBox" name="box_steam_2">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>151</width>
+       <width>121</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Windows Live Mail</string>
+      <string>Kunde info</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="box_skype_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>121</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Restart</string>
      </property>
     </widget>
    </widget>
-   <widget class="QPlainTextEdit" name="logBox">
+   <widget class="QPushButton" name="startKompis">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>400</y>
-      <width>361</width>
-      <height>221</height>
+      <x>570</x>
+      <y>440</y>
+      <width>151</width>
+      <height>51</height>
      </rect>
     </property>
-    <property name="readOnly">
-     <bool>true</bool>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>START KOMPIS</string>
     </property>
    </widget>
   </widget>
@@ -773,7 +860,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>772</width>
+     <width>740</width>
      <height>22</height>
     </rect>
    </property>
@@ -816,6 +903,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

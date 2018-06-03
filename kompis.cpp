@@ -11,38 +11,33 @@ Kompis::~Kompis(){
 }
 
 void Kompis::loadProgram(){
-    // Sjekk OS versjon
+    log(name + " (versjon " + version + ") - " + "Utviklet av Sirajuddin Asjad");
+
     #if defined(Q_OS_MACOS)
         os = "mac";
     #elif defined(Q_OS_WIN)
         os = "windows";
     #elif defined(Q_OS_LINUX)
         os = "linux";
-    #elif defined(Q_OS_UNIX)
-        os = "unix";
     #else
         os = "unknown";
     #endif
 
-    // Sett logo
-    QString dir = "../" + QDir::currentPath();
-    QString dir2 = dir + "/resources/elkjop.png";
-    log(dir2);
-    //QPixmap pix();
-    //ui->label_logo->setPixmap(pix);
-
-    // Checkbox oppsett
     if(os == "mac"){
         ui->box_win10update->setEnabled(false);
         ui->box_win8update->setEnabled(false);
         ui->box_winlive->setEnabled(false);
         ui->box_classicstart->setEnabled(false);
         ui->box_crapfjerner->setEnabled(false);
-        log("Kjører KompisUSB for Mac.");
+        log("Kjører KompisUSB for Mac, laster inn objekter.");
     }
     else if(os == "windows"){
         ui->box_onyx->setEnabled(false);
-        log("Kjører KompisUSB for Windows.");
+        log("Kjører KompisUSB for Windows, laster inn objekter.");
+    }
+    else if(os == "linux"){
+        ui->startKompis->setEnabled(false);
+        log("Kjører KompisUSB for Linux, laster inn objekter.");
     }
     else{
         ui->startKompis->setEnabled(false);
@@ -65,7 +60,34 @@ QString Kompis::getTime(){
     return dateTimeString;
 }
 
-//void Kompis::on_checkbox_install_ec_toggled(bool checked){
-//    if(checked) ui->checkbox_uninstall_ec->setEnabled(false);
-//    else ui->checkbox_uninstall_ec->setEnabled(true);
-//}
+void Kompis::on_box_elkjopcloud_toggled(bool checked){
+    if(checked){
+        ui->box_fjerncloud->setChecked(false);
+        ui->box_fjerncloud->setEnabled(false);
+    }
+    else ui->box_fjerncloud->setEnabled(true);
+}
+
+void Kompis::on_box_fjerncloud_toggled(bool checked){
+    if(checked){
+        ui->box_elkjopcloud->setChecked(false);
+        ui->box_elkjopcloud->setEnabled(false);
+    }
+    else ui->box_elkjopcloud->setEnabled(true);
+}
+
+void Kompis::on_box_malw_toggled(bool checked){
+    if(checked){
+        ui->box_fjernmalw->setChecked(false);
+        ui->box_fjernmalw->setEnabled(false);
+    }
+    else ui->box_fjernmalw->setEnabled(true);
+}
+
+void Kompis::on_box_fjernmalw_toggled(bool checked){
+    if(checked){
+        ui->box_malw->setChecked(false);
+        ui->box_malw->setEnabled(false);
+    }
+    else ui->box_malw->setEnabled(true);
+}

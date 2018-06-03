@@ -13,3 +13,6 @@ HEADERS += \
 
 FORMS += \
         kompis.ui
+
+RESOURCES += \
+    resources.qrc

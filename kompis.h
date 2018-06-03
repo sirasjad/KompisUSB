@@ -17,10 +17,15 @@ public:
 
 private slots:
     void on_startKompis_clicked();
+    void on_box_elkjopcloud_toggled(bool checked);
+    void on_box_fjerncloud_toggled(bool checked);
+    void on_box_malw_toggled(bool checked);
+    void on_box_fjernmalw_toggled(bool checked);
 
 private:
     Ui::Kompis *ui;
-    QString version;
+    QString name = "KompisUSB";
+    QString version = "1.0";
     QString os;
 
     QString getTime();

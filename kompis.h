@@ -22,6 +22,10 @@ private slots:
     void on_box_malw_toggled(bool checked);
     void on_box_fjernmalw_toggled(bool checked);
 
+    void on_box_remotefix_toggled(bool checked);
+
+    void on_box_fjernremote_toggled(bool checked);
+
 private:
     Ui::Kompis *ui;
     QString name = "KompisUSB";

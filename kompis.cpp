@@ -24,20 +24,20 @@ void Kompis::loadProgram(){
     #endif
 
     if(os == "mac"){
+        log("Kjører KompisUSB for Mac, laster inn objekter.");
         ui->box_win10update->setEnabled(false);
         ui->box_win8update->setEnabled(false);
         ui->box_winlive->setEnabled(false);
         ui->box_classicstart->setEnabled(false);
         ui->box_crapfjerner->setEnabled(false);
-        log("Kjører KompisUSB for Mac, laster inn objekter.");
     }
     else if(os == "windows"){
-        ui->box_onyx->setEnabled(false);
         log("Kjører KompisUSB for Windows, laster inn objekter.");
+        ui->box_onyx->setEnabled(false);
     }
     else if(os == "linux"){
-        ui->startKompis->setEnabled(false);
         log("Kjører KompisUSB for Linux, laster inn objekter.");
+        ui->startKompis->setEnabled(false);
     }
     else{
         ui->startKompis->setEnabled(false);
@@ -90,4 +90,20 @@ void Kompis::on_box_fjernmalw_toggled(bool checked){
         ui->box_malw->setEnabled(false);
     }
     else ui->box_malw->setEnabled(true);
+}
+
+void Kompis::on_box_remotefix_toggled(bool checked){
+    if(checked){
+        ui->box_fjernremote->setChecked(false);
+        ui->box_fjernremote->setEnabled(false);
+    }
+    else ui->box_fjernremote->setEnabled(true);
+}
+
+void Kompis::on_box_fjernremote_toggled(bool checked){
+    if(checked){
+        ui->box_remotefix->setChecked(false);
+        ui->box_remotefix->setEnabled(false);
+    }
+    else ui->box_remotefix->setEnabled(true);
 }

@@ -121,3 +121,7 @@ void Kompis::on_menu_innstillinger_triggered(){
     se.setModal(true);
     se.exec();
 }
+
+void Kompis::on_menu_oppdatering_triggered(){
+    //
+}

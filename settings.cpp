@@ -15,15 +15,6 @@ void Settings::loadSettings(){
     //
 }
 
-void Settings::on_button_add_clicked(){
-    QString fileAddress = ui->text_address->text();
-    if(ui->text_address->text() != ""){
-        ui->list->addItem(fileAddress);
-    }
-    ui->text_address->clear();
-    isListEmpty();
-}
-
 void Settings::isListEmpty(){
     if(ui->list->count() == 0){
         ui->button_delete->setEnabled(false);
@@ -31,6 +22,15 @@ void Settings::isListEmpty(){
     else{
         ui->button_delete->setEnabled(true);
     }
+}
+
+void Settings::on_button_add_clicked(){
+    QString fileAddress = ui->text_address->text();
+    if(ui->text_address->text() != ""){
+        ui->list->addItem(fileAddress);
+    }
+    ui->text_address->clear();
+    isListEmpty();
 }
 
 void Settings::on_button_delete_clicked(){

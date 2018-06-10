@@ -8,17 +8,17 @@ SOURCES += \
         main.cpp \
         kompis.cpp \
         aboutwindow.cpp \
-    settings.cpp
+        settings.cpp
 
 HEADERS += \
         kompis.h \
         aboutwindow.h \
-    settings.h
+        settings.h
 
 FORMS += \
         kompis.ui \
         aboutwindow.ui \
-    settings.ui
+        settings.ui
 
 RESOURCES += \
         resources.qrc

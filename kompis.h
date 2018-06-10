@@ -26,6 +26,10 @@ private slots:
     void on_menu_omkompis_triggered();
     void on_menu_innstillinger_triggered();
     void on_menu_oppdatering_triggered();
+    void on_modus_nullstill_clicked();
+    void on_modus_sa_clicked();
+    void on_modus_rtg_clicked();
+    void on_modus_service_clicked();
 
 private:
     Ui::Kompis *ui;

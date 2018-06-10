@@ -26,7 +26,7 @@
     <property name="title">
      <string>Velg modus:</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="modus_sa">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -39,7 +39,7 @@
       <string>SA OPPSETT</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="modus_rtg">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -52,7 +52,7 @@
       <string>RTG OPPSETT</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_3">
+    <widget class="QPushButton" name="modus_service">
      <property name="geometry">
       <rect>
        <x>280</x>
@@ -65,7 +65,7 @@
       <string>SERVICE</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QPushButton" name="modus_nullstill">
      <property name="geometry">
       <rect>
        <x>410</x>
@@ -266,7 +266,7 @@
       <string>Win8.1 Update</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_win8update_2">
+    <widget class="QCheckBox" name="box_wsus">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -357,7 +357,7 @@
       <string>DDU</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_produkey_2">
+    <widget class="QCheckBox" name="box_reveal">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -795,7 +795,7 @@
     <property name="title">
      <string>Avslutning:</string>
     </property>
-    <widget class="QCheckBox" name="box_skype_2">
+    <widget class="QCheckBox" name="box_snarvei">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -808,7 +808,7 @@
       <string>Snarveier</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_steam_2">
+    <widget class="QCheckBox" name="box_kundeinfo">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -821,7 +821,7 @@
       <string>Kunde info</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_skype_3">
+    <widget class="QCheckBox" name="box_nettleser">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -834,7 +834,7 @@
       <string>Sjekk nettleser</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="box_skype_4">
+    <widget class="QCheckBox" name="box_restart">
      <property name="geometry">
       <rect>
        <x>10</x>

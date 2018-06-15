@@ -3,6 +3,7 @@
 #include <QMainWindow>
 #include <QDateTime>
 #include <QDir>
+#include <QProcess>
 
 namespace Ui{
     class Kompis;
@@ -36,10 +37,16 @@ private:
     QString name = "KompisUSB";
     QString version = "1.0";
     QString os;
+    bool finishKompis = false;
 
     QString getTime();
     void log(QString);
     void loadProgram();
+
+    void install_chrome();
+    void install_mozilla();
+    void install_elkjopcloud();
+    void install_remotefix();
 };
 
 #endif

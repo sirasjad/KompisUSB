@@ -26,7 +26,7 @@ void Kompis::loadProgram(){
     #endif
 
     if(os == "mac"){
-        log("Kjører KompisUSB for Mac, laster inn objekter.");
+        log("Kjører KompisUSB for Mac. Ready!");
         ui->box_win10update->setEnabled(false);
         ui->box_win8update->setEnabled(false);
         ui->box_winlive->setEnabled(false);
@@ -34,12 +34,12 @@ void Kompis::loadProgram(){
         ui->box_crapfjerner->setEnabled(false);
     }
     else if(os == "windows"){
-        log("Kjører KompisUSB for Windows, laster inn objekter.");
+        log("Kjører KompisUSB for Windows. Ready!");
         ui->box_onyx->setEnabled(false);
     }
     else if(os == "linux"){
-        log("Kjører KompisUSB for Linux, laster inn objekter.");
-        ui->startKompis->setEnabled(false);
+        log("Kjører KompisUSB for Linux. Ready!");
+        //ui->startKompis->setEnabled(false);
     }
     else{
         ui->startKompis->setEnabled(false);
@@ -48,8 +48,12 @@ void Kompis::loadProgram(){
 }
 
 void Kompis::on_startKompis_clicked(){
-    ui->box_elkjopcloud->setStyleSheet("QCheckBox { color: green; }");
-    log("Kjører Kompis.");
+    ui->startKompis->setEnabled(false);
+    // Internett
+    if(ui->box_chrome->isEnabled() && ui->box_chrome->isChecked()) install_chrome();
+    if(ui->box_mozilla->isEnabled() && ui->box_mozilla->isChecked()) install_mozilla();
+    if(ui->box_elkjopcloud->isEnabled() && ui->box_elkjopcloud->isChecked()) install_elkjopcloud();
+    if(ui->box_remotefix->isEnabled() && ui->box_remotefix->isChecked()) install_remotefix();
 }
 
 void Kompis::log(QString text){

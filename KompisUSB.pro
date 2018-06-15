@@ -8,7 +8,8 @@ SOURCES += \
         main.cpp \
         kompis.cpp \
         aboutwindow.cpp \
-        settings.cpp
+        settings.cpp \
+        commands.cpp
 
 HEADERS += \
         kompis.h \

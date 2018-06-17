@@ -26,7 +26,7 @@ void Kompis::loadProgram(){
     #endif
 
     if(os == "mac"){
-        log("Kjører KompisUSB for Mac. Ready!");
+        log("Kjører KompisUSB for Mac. Antall CPU kjerner: 0");
         ui->box_win10update->setEnabled(false);
         ui->box_win8update->setEnabled(false);
         ui->box_winlive->setEnabled(false);
@@ -34,26 +34,41 @@ void Kompis::loadProgram(){
         ui->box_crapfjerner->setEnabled(false);
     }
     else if(os == "windows"){
-        log("Kjører KompisUSB for Windows. Ready!");
+        log("Kjører KompisUSB for Windows. Antall CPU kjerner: 0");
         ui->box_onyx->setEnabled(false);
     }
     else if(os == "linux"){
-        log("Kjører KompisUSB for Linux. Ready!");
-        //ui->startKompis->setEnabled(false);
+        log("Kjører KompisUSB for Linux. Antall CPU kjerner: 0");
     }
     else{
         ui->startKompis->setEnabled(false);
         log("Ukjent operativsystem. Kontakt utvikler!");
     }
+    log("------------------------------------------------------------------------------------");
 }
 
 void Kompis::on_startKompis_clicked(){
-    ui->startKompis->setEnabled(false);
+    if(isRunning){
+        isRunning = false;
+        ui->startKompis->setText("START KOMPIS");
+        log("Du har avbrutt Kompis!");
+        return;
+    }
+    else{
+        isRunning = true;
+        ui->startKompis->setText("AVBRYT");
+        log("Starter Kompis...");
+    }
+
     // Internett
     if(ui->box_chrome->isEnabled() && ui->box_chrome->isChecked()) install_chrome();
     if(ui->box_mozilla->isEnabled() && ui->box_mozilla->isChecked()) install_mozilla();
     if(ui->box_elkjopcloud->isEnabled() && ui->box_elkjopcloud->isChecked()) install_elkjopcloud();
     if(ui->box_remotefix->isEnabled() && ui->box_remotefix->isChecked()) install_remotefix();
+
+    log("Kompis har fullført! Du kan nå avslutte programmet.");
+    isRunning = false;
+    ui->startKompis->setText("START KOMPIS");
 }
 
 void Kompis::log(QString text){

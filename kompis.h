@@ -37,7 +37,7 @@ private:
     QString name = "KompisUSB";
     QString version = "1.0";
     QString os;
-    bool finishKompis = false;
+    bool isRunning = false;
 
     QString getTime();
     void log(QString);

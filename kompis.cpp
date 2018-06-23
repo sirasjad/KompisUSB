@@ -44,7 +44,6 @@ void Kompis::loadProgram(){
         ui->startKompis->setEnabled(false);
         log("Ukjent operativsystem. Kontakt utvikler!");
     }
-    log("------------------------------------------------------------------------------------");
 }
 
 void Kompis::on_startKompis_clicked(){
@@ -57,7 +56,7 @@ void Kompis::on_startKompis_clicked(){
     else{
         isRunning = true;
         ui->startKompis->setText("AVBRYT");
-        log("Starter Kompis...");
+        log("Du har startet kompis!");
     }
 
     // Internett
@@ -66,7 +65,7 @@ void Kompis::on_startKompis_clicked(){
     if(ui->box_elkjopcloud->isEnabled() && ui->box_elkjopcloud->isChecked()) install_elkjopcloud();
     if(ui->box_remotefix->isEnabled() && ui->box_remotefix->isChecked()) install_remotefix();
 
-    log("Kompis har fullført! Du kan nå avslutte programmet.");
+    log("Ferdig!");
     isRunning = false;
     ui->startKompis->setText("START KOMPIS");
 }

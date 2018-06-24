@@ -11,14 +11,13 @@ void Kompis::install_chrome(){
 }
 
 void Kompis::install_mozilla(){
-    log("Installerer Mozilla Firefox");
-    ui->box_mozilla->setStyleSheet("QCheckBox { color: green; }");
+    //
 }
 
 void Kompis::install_elkjopcloud(){
-
+    //
 }
 
 void Kompis::install_remotefix(){
-
+    //
 }

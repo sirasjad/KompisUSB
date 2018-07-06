@@ -22,4 +22,4 @@ FORMS += \
         design/settings.ui
 
 RESOURCES += \
-        resources.qrc
+        resources.qrc \

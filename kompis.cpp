@@ -1,7 +1,7 @@
-#include "kompis.h"
+#include "headers/kompis.h"
 #include "ui_kompis.h"
-#include "aboutwindow.h"
-#include "settings.h"
+#include "headers/aboutwindow.h"
+#include "headers/settings.h"
 
 Kompis::Kompis(QWidget *parent) : QMainWindow(parent), ui(new Ui::Kompis){
     ui->setupUi(this);

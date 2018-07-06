@@ -1,4 +1,4 @@
-#include "aboutwindow.h"
+#include "headers/aboutwindow.h"
 #include "ui_aboutwindow.h"
 
 AboutWindow::AboutWindow(QWidget *parent) : QDialog(parent), ui(new Ui::AboutWindow){

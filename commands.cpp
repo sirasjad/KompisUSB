@@ -1,4 +1,4 @@
-#include "kompis.h"
+#include "headers/kompis.h"
 #include "ui_kompis.h"
 
 void Kompis::install_chrome(){

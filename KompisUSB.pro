@@ -12,14 +12,14 @@ SOURCES += \
         commands.cpp
 
 HEADERS += \
-        kompis.h \
-        aboutwindow.h \
-        settings.h
+        headers/kompis.h \
+        headers/aboutwindow.h \
+        headers/settings.h
 
 FORMS += \
-        kompis.ui \
-        aboutwindow.ui \
-        settings.ui
+        design/kompis.ui \
+        design/aboutwindow.ui \
+        design/settings.ui
 
 RESOURCES += \
         resources.qrc

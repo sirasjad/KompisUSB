@@ -1,4 +1,4 @@
-#include "kompis.h"
+#include "headers/kompis.h"
 #include <QApplication>
 
 int main(int argc, char *argv[]){

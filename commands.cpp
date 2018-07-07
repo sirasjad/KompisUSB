@@ -3,10 +3,14 @@
 
 void Kompis::install_chrome(){
     log("Installerer Google Chrome");
+
     QProcess process;
-    process.start("/home/sirasjad/Desktop/test.sh");
-    process.waitForFinished();
+    process.start("../scripts/mac/test.sh");
+    QString qEnv = qgetenv("CHROME_FINISHED");
+    log(qEnv);
     process.close();
+
+    //process.startDetached("../scripts/mac/test.sh");
     ui->box_chrome->setStyleSheet("QCheckBox { color: green; }");
 }
 
